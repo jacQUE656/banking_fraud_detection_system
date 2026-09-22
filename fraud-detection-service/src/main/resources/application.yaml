@@ -1,3 +1,43 @@
 spring:
   application:
     name: fraud-detection-service
+  data:
+    redis:
+      host: localhost
+      port: 6379
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    consumer:
+      group-id: fraud-detection-service-group
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring:
+          json:
+            trusted:
+              packages: "*"
+            use:
+              type:
+                headers: false
+            value:
+              default:
+                type: java.util.HashMap  #Payload type
+  server:
+    port: 9003
+account:
+  service:
+    url: http://localhost:9001
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+fraud:
+  max-transactions-per-minute: 5
+  suspicious-amount-multiplier: 5
+  max-balance-percentage: 0.90
