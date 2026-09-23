@@ -22,15 +22,16 @@ spring:
             value:
               default:
                 type: java.util.HashMap  #Payload type
-    server:
-      port: 9009
-  account:
-    service:
-      url: http://localhost:9001
+server:
+  port: 9009
 
-  management:
-    endpoints:
-      web:
-        exposure:
-          include: health,info
+account:
+  service:
+    url: http://localhost:9001
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
 

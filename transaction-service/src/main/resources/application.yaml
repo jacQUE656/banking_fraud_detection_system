@@ -7,7 +7,7 @@ spring:
       port: 6379
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/transaction_db
+    url: jdbc:postgresql://localhost:5433/transaction_db
     username: banking_user
     password: banking_password
     driver-class-name: org.postgresql.Driver

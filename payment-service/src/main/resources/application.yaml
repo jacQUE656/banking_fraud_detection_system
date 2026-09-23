@@ -2,7 +2,7 @@ spring:
   application:
     name: payment-service
   datasource:
-    url: jdbc:postgresql://localhost:5432/payment_db
+    url: jdbc:postgresql://localhost:5433/payment_db
     username: banking_user
     password: banking_password
     driver-class-name: org.postgresql.Driver
@@ -18,7 +18,7 @@ spring:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
 server:
-  port: 9003
+  port: 9008
 
 razorpay:
   key-id: rzp_test_T2FvGG0wj1yE6j

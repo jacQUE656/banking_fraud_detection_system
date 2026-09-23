@@ -29,7 +29,7 @@ public class PaymentService {
     @Value("${razorpay.key-id}")
     private String keyId;
 
-    @Value("${razorpay.key-secrete}")
+    @Value("${razorpay.key-secret}")
     private String keySecret;
 
 

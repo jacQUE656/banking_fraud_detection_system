@@ -2,7 +2,7 @@ spring:
   application:
     name: accounting-service
   datasource:
-    url: jdbc:postgresql://localhost:5432/bank_account_db
+    url: jdbc:postgresql://localhost:5433/bank_account_db
     username: banking_user
     password: banking_password
     driver-class-name: org.postgresql.Driver
