@@ -10,7 +10,7 @@ spring:
       routes:
         #ACCOUNT SERVICE ROUTE
         - id: account-service
-          url: http://localhost:9092
+          url: http://localhost:9091
           predicates:
             - Path=/api/v1/accounts/**
           filters:
@@ -21,7 +21,7 @@ spring:
 
         #TRANSACTION SERVICE ROUTE
         - id: transaction-service
-          url: http://localhost:9091
+          url: http://localhost:9092
           predicates:
             - Path=/api/v1/transactions/**
           filters:
@@ -32,7 +32,7 @@ spring:
 
         #PAYMENT SERVICE ROUTE
         - id: payment-service
-          url: http://localhost:9092
+          url: http://localhost:9098
           predicates:
             - Path=/api/v1/payments/**
           filters:
